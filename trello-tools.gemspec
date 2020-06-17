@@ -1,4 +1,4 @@
-require_relative 'lib/trello/tools/version'
+require_relative 'lib/trello/snapshot/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "trello-snapshot"
