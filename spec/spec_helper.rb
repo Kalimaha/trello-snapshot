@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+require 'simplecov'
+SimpleCov.minimum_coverage 97
+SimpleCov.start
+
 RSpec.configure do |config|
   require 'byebug'
 
