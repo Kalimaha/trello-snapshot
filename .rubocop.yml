@@ -1,0 +1,11 @@
+AllCops:
+  Exclude:
+    - "Gemfile"
+    - "*.gemspec"
+    - "spec/spec_helper"
+    - "lib/trello/tools/version.rb"
+    - "bin/*.*"
+    - "Rakefile"
+
+Documentation:
+  Enabled: false
