@@ -9,7 +9,7 @@ RSpec.describe Trello::Tools::Parser do
   let(:action_type) { 'updateCard' }
   let(:card_id)     { '5ee9aacad92bb62c858374dd' }
   let(:date)        { '2020-06-17T05:32:33.939Z' }
-  let(:list_id) { '5ee9aac43ce8d672506c4e8c' }
+  let(:list_id)     { '5ee9aac43ce8d672506c4e8c' }
   let(:payload) do
     [
       {
