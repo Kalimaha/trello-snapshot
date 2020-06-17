@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'date'
-require 'trello/tools/action'
+require 'trello/tools/models/action'
 
 module Trello
   module Tools
@@ -15,8 +15,7 @@ module Trello
 
         def to_action
           proc do |action|
-            # byebug
-            Action.new(
+            Trello::Tools::Models::Action.new(
               type: action[:type],
               card_id: action[:data][:card][:id],
               date: Date.parse(action[:date]),
