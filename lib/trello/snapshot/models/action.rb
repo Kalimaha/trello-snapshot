@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Trello
-  module Tools
+  module Snapshot
     module Models
       class Action
         attr_accessor :type, :card_id, :date, :old_list_id, :list_id

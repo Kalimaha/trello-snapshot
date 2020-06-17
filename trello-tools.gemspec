@@ -1,8 +1,8 @@
 require_relative 'lib/trello/tools/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "trello-tools"
-  spec.version       = Trello::Tools::VERSION
+  spec.name          = "trello-snapshot"
+  spec.version       = Trello::Snapshot::VERSION
   spec.authors       = ["Kalimaha"]
   spec.email         = ["guido.barbaglia@gmail.com"]
 

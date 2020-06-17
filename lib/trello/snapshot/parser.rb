@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'date'
-require 'trello/tools/models/action'
+require 'trello/snapshot/models/action'
 
 module Trello
-  module Tools
+  module Snapshot
     class Parser
       class << self
         def parse(payload)
@@ -15,7 +15,7 @@ module Trello
 
         def to_action
           proc do |action|
-            Trello::Tools::Models::Action.new(
+            Trello::Snapshot::Models::Action.new(
               type: action[:type],
               card_id: action[:data][:card][:id],
               date: Date.parse(action[:date]),

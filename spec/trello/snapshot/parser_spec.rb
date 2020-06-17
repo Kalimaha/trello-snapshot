@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require 'trello/tools/parser'
+require 'trello/snapshot/parser'
 
-RSpec.describe Trello::Tools::Parser do
-  subject(:actions) { Trello::Tools::Parser.parse(payload) }
+RSpec.describe Trello::Snapshot::Parser do
+  subject(:actions) { Trello::Snapshot::Parser.parse(payload) }
 
   let(:action_type) { 'updateCard' }
   let(:card_id)     { '5ee9aacad92bb62c858374dd' }

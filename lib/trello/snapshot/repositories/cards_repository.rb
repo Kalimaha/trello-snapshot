@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Trello
-  module Tools
+  module Snapshot
     module Repositories
       class CardsRepository
       end
