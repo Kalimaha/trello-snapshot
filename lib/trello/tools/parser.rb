@@ -15,12 +15,13 @@ module Trello
 
         def to_action
           proc do |action|
+            # byebug
             Action.new(
               type: action[:type],
               card_id: action[:data][:card][:id],
               date: Date.parse(action[:date]),
-              old_list_id: nil,
-              new_list_id: nil
+              old_list_id: action[:data][:old][:idList],
+              list_id: action[:data][:list][:id]
             )
           end
         end
