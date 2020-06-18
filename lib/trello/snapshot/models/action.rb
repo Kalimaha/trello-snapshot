@@ -4,14 +4,15 @@ module Trello
   module Snapshot
     module Models
       class Action
-        attr_accessor :type, :card_id, :date, :old_list_id, :list_id
+        attr_accessor :id, :date_last_update, :list_id, :list_name, :old_list_id, :old_list_name
 
-        def initialize(type:, card_id:, date:, old_list_id:, list_id:)
-          @type = type
-          @card_id = card_id
-          @date = date
+        def initialize(id:, date_last_update:, list_id:, list_name:, old_list_id:, old_list_name:)
+          @id = id
+          @date_last_update = date_last_update
           @old_list_id = old_list_id
+          @old_list_name = old_list_name
           @list_id = list_id
+          @list_name = list_name
         end
       end
     end

@@ -12,7 +12,7 @@ module Trello
 
         class << self
           def cards
-            JSON.parse(Faraday.get(url).body).map { |x| to_card(x) }
+            JSON.parse(Faraday.get(url).body).map(&to_card)
           rescue Faraday::Error
             []
           end
@@ -25,14 +25,16 @@ module Trello
 
           private
 
-          def to_card(card)
-            Trello::Snapshot::Models::Card.new(
-              id: card['id'],
-              closed: card['closed'],
-              date_last_update: Date.parse(card['dateLastActivity']),
-              list_id: card['idList'],
-              name: card['name']
-            )
+          def to_card
+            proc do |card|
+              Trello::Snapshot::Models::Card.new(
+                id: card['id'],
+                closed: card['closed'],
+                date_last_update: Date.parse(card['dateLastActivity']),
+                list_id: card['idList'],
+                name: card['name']
+              )
+            end
           end
         end
       end

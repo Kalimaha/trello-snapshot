@@ -12,3 +12,7 @@ Documentation:
 
 Metrics/BlockLength:
   Enabled: false
+
+Metrics/ParameterLists:
+  Exclude:
+    - "lib/trello/snapshot/models/action.rb"
