@@ -24,5 +24,9 @@ jobs:
       run: bundle install
     - name: Run tests
       run: bundle exec rspec
+      env:
+        TRELLO_KEY: 42
+        TRELLO_TOKEN: 42
+        BOARD_ID: 42
     - name: Run quality checks
       run: bundle exec rubocop
