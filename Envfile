@@ -1,0 +1,3 @@
+variable :BOARD_ID, :string
+variable :TRELLO_KEY, :string
+variable :TRELLO_TOKEN, :string

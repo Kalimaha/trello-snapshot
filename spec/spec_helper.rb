@@ -4,6 +4,11 @@ require 'simplecov'
 SimpleCov.minimum_coverage 95
 SimpleCov.start
 
+require 'warning'
+Gem.path.each do |path|
+  Warning.ignore(//, path)
+end
+
 RSpec.configure do |config|
   require 'byebug'
 

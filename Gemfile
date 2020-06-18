@@ -4,6 +4,8 @@ gemspec
 
 gem 'rake', '~> 12.0'
 gem 'faraday'
+gem 'envied'
+gem 'warning'
 
 group :development, :test do
   gem 'rspec', '~> 3.4.0'
