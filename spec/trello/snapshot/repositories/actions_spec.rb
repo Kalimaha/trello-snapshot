@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require 'trello/snapshot/repositories/actions_repository'
+require 'trello/snapshot/repositories/actions'
 
-RSpec.describe Trello::Snapshot::Repositories::ActionsRepository do
+RSpec.describe Trello::Snapshot::Repositories::Actions do
   let(:card_id) { 'T42' }
 
   describe '#actions' do

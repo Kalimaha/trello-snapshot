@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require 'trello/snapshot/repositories/cards_repository'
+require 'trello/snapshot/repositories/cards'
 
-RSpec.describe Trello::Snapshot::Repositories::CardsRepository do
+RSpec.describe Trello::Snapshot::Repositories::Cards do
   describe '#cards' do
     subject(:cards) { described_class.cards }
 

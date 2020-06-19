@@ -7,7 +7,7 @@ require 'trello/snapshot/models/action'
 module Trello
   module Snapshot
     module Repositories
-      class ActionsRepository
+      class Actions
         TRELLO_BASE_URL = 'https://api.trello.com'
 
         class << self
